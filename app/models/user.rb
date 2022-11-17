@@ -4,8 +4,12 @@ class User < ApplicationRecord
   include Billable
 
   scope :subscribed, -> { where(paying_customer: true) }
-end
 
+  has_many :projects
+  has_many :subscriptions
+
+  has_many :stakeholder_updates, through: :projects
+end
 
 # rails generators...
 #
