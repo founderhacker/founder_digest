@@ -1,0 +1,34 @@
+<%= render partial: "shared/heading", locals: { title: 'Welcome to FoundrDigest!', tagline: 'Congrats on being accepted to our private community.<br>Provide just a couple more details below to begin subscribing to other founder stakeholder updates.' } %>
+
+<div class="max-w-sm mx-auto">
+  <form class="space-y-8">
+    <div class="space-y-8">
+      <div class="">
+        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+
+          <div class="sm:col-span-6">
+            <label for="email" class="block text-sm font-medium text-gray-700">What's your stakeholder update called?</label>
+            <div class="mt-1">
+              <input id="email" name="email" type="text" placeholder="Fomo.com Monthly Update" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+            </div>
+            <p class="mt-2 text-sm text-gray-500">Your company name is fine, e.g. "Fomo" or a brief summary, such as "B2B SaaS Bootstrapped Startup"</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="sm:col-span-6">
+        <label for="about" class="block text-sm font-medium text-gray-700">Please describe your updates in 15 words or fewer.</label>
+        <div class="mt-1">
+          <textarea id="about" name="about" maxlength="150" placeholder="Fomo is a bootstrapped SaaS with product led growth and monthly marketing experiments." rows="3" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5">
+      <div class="flex justify-end">
+        <button type="submit" class="w-full inline-flex justify-center rounded-md border border-transparent bg-primary py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary-hover-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Continue to Dashboard</button>
+      </div>
+    </div>
+  </form>
+</div>

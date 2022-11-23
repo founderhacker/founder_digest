@@ -5,7 +5,9 @@ class PagesController < ApplicationController
   end
 
   def apply
+  end
 
+  def start
   end
 
   def logout
