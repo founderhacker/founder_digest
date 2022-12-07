@@ -1,4 +1,4 @@
-# Founder Digest - Sample Branch
+# Founder Digest
 a give-and-get newsletter swap for founders seeking to learn from other founders. learn how to build this at [24 Hour MVP](https://founderhacker.com/24-hour-mvp).
 
 ## Installation
