@@ -3,7 +3,7 @@ class Admin::UserSubmissionsController < ApplicationController
 
   def update
     @user_submission.update(user_submission_params)
-    # SELECT * from user_submissions where name = 'Ryan';
+    # TODO: send mailer with accepted/rejected status
     redirect_to admin_path, notice: 'User submission updated successfully'
   end
 
