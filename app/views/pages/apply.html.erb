@@ -13,28 +13,28 @@
             <div class="sm:col-span-3">
               <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
               <div class="mt-1">
-                <%= form.text_field :first_name, placeholder: 'Ryan', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+                <%= form.text_field :first_name, required: true, placeholder: 'Ryan', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
               </div>
             </div>
 
             <div class="sm:col-span-3">
               <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
               <div class="mt-1">
-                <%= form.text_field :last_name, placeholder: 'Kulp', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+                <%= form.text_field :last_name, placeholder: 'Kulp', required: true, class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
               </div>
             </div>
 
             <div class="sm:col-span-6">
               <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
               <div class="mt-1">
-                <%= form.text_field :email, type: 'email', placeholder: 'ryan@fomo.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+                <%= form.text_field :email, type: 'email', required: true, placeholder: 'ryan@fomo.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
               </div>
             </div>
 
             <div class="sm:col-span-6">
               <label for="website" class="block text-sm font-medium text-gray-700">Company Website</label>
               <div class="mt-1">
-                <%= form.text_field :website, type: 'url', placeholder: 'https://fomo.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+                <%= form.text_field :website, type: 'url', required: true, placeholder: 'https://fomo.com', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
               </div>
             </div>
           </div>
@@ -46,15 +46,15 @@
               <legend class="contents text-base font-medium text-gray-900">What's your role?</legend>
               <div class="mt-4 space-y-4">
                 <div class="flex items-center">
-                  <input id="user_submission_job_role_csuite" name="user_submission[job_role]" value="c-suite" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                  <input id="user_submission_job_role_csuite" required name="user_submission[job_role]" value="c-suite" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
                   <label for="user_submission_job_role_csuite" class="ml-3 block text-sm font-medium text-gray-700">C-Suite</label>
                 </div>
                 <div class="flex items-center">
-                  <input id="user_submission_job_role_founder" name="user_submission[job_role]" value="founder" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                  <input id="user_submission_job_role_founder" required name="user_submission[job_role]" value="founder" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
                   <label for="user_submission_job_role_founder" class="ml-3 block text-sm font-medium text-gray-700">Founder</label>
                 </div>
                 <div class="flex items-center">
-                  <input id="user_submission_job_role_employee" name="user_submission[job_role]" value="employee" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                  <input id="user_submission_job_role_employee" required name="user_submission[job_role]" value="employee" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
                   <label for="user_submission_job_role_employee" class="ml-3 block text-sm font-medium text-gray-700">Employee</label>
                 </div>
               </div>
