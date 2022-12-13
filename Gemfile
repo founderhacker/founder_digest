@@ -30,6 +30,7 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
+  gem 'faker'
 end
 
 group :development do
@@ -45,5 +46,4 @@ group :test do
   gem 'factory_bot_rails'
   gem 'shoulda-callback-matchers'
   gem 'shoulda-matchers'
-  gem 'faker'
 end
