@@ -21,14 +21,14 @@ class BillingPortalController < ApplicationController
   def begin_subscription
     session = Stripe::Checkout::Session.create({
       customer: current_user.stripe_customer_id,
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'us_bank_account'],
       mode: 'subscription',
-      allow_promotion_codes: true,
+      allow_promotion_codes: false,
       line_items: [{
         quantity: 1,
         price: ENV['stripe_product_price_id']
       }],
-      success_url: "#{ENV['base_url']}#{dashboard_index_path}?subscribed=true",
+      success_url: "#{ENV['base_url']}#{dashboard_path}?subscribed=true",
       cancel_url: "#{ENV['base_url']}#{account_index_path}?aborted=true"
     })
 
@@ -39,7 +39,7 @@ class BillingPortalController < ApplicationController
   def modify_subscription
     session = Stripe::BillingPortal::Session.create({
       customer: current_user.stripe_customer_id,
-      return_url: "#{ENV['base_url']}/#{account_index_path}?updated=true"
+      return_url: "#{ENV['base_url']}#{account_index_path}?updated=true"
     })
 
     session.url
