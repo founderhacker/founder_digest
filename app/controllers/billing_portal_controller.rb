@@ -28,7 +28,7 @@ class BillingPortalController < ApplicationController
         quantity: 1,
         price: ENV['stripe_product_price_id']
       }],
-      success_url: "#{ENV['base_url']}#{dashboard_path}?subscribed=true",
+      success_url: "#{ENV['base_url']}#{account_index_path}?subscribed=true",
       cancel_url: "#{ENV['base_url']}#{account_index_path}?aborted=true"
     })
 

@@ -30,7 +30,7 @@
 <!-- newsletters -->
 
 <div class="p-5 max-w-3xl mx-auto space-y-4">
-
+  <p class='text-right'>Subscribed?</p>
   <% @other_projects.each do |other_project| %>
     <div class="flex border border-dashed border-2 p-2">
       <div class="basis-1/2">
@@ -48,7 +48,7 @@
         <div class="relative flex items-start py-4">
             <div class="min-w-0 flex-1 text-sm">
               <label for="<%= other_project.id %>_subscribed_status" class="font-medium text-gray-700">
-                {{ Subscribed Status }}
+                Subscribe
               </label>
             </div>
             <div class="ml-3 flex h-5 items-center">

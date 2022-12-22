@@ -1,0 +1,21 @@
+<div class="max-w-3xl mx-auto">
+  <%= form_for @stakeholder_update do |form| %>
+    <%= form.text_field :confirmed_at, type: 'hidden', value: nil %>
+
+    <div class="mb-4">
+      <label for="title" class="block text-sm font-medium text-gray-700">Title / Headline</label>
+      <div class="mt-1">
+        <%= form.text_field :title, required: true, placeholder: 'December 2022 newsletter', class: 'block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' %>
+      </div>
+      <small>This will be used as a clickable link to your update in email newsletters.</small>
+    </div>
+
+    <div class="field">
+      <%= form.rich_text_area :content %>
+    </div>
+
+    <div class="mt-2 text-right">
+      <button type="submit" class="w-full inline-flex justify-center rounded-md border border-transparent bg-brand-orange hover:bg-brand-orange-dark py-2 px-4 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Preview and Confirm</button>
+    </div>
+  <% end %>
+</div>
