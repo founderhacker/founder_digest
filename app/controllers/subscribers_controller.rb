@@ -5,8 +5,15 @@ class SubscribersController < ApplicationController
   before_action :set_subscriber, only: [:destroy]
 
   def create
-    subscriber = current_user.subscribers.create!(subscriber_params)
-    render json: { status: 'ok', subscriber_id: subscriber.id, project_id: subscriber.project_id }
+    subscriber = current_user.subscribers.new(subscriber_params)
+
+    if subscriber.save
+      response_params = { success: true, subscriber_id: subscriber.id }
+    else
+      response_params = { success: false, error: subscriber.errors.full_messages.join }
+    end
+
+    render json: response_params
   end
 
   def destroy
