@@ -2,6 +2,10 @@
 
 <% plan_name = params[:plan] || 'free' %>
 
+<% if flash[:error] %>
+  <div class="max-w-sm mx-auto text-red-600 text-center text-lg"><%= flash[:error] %></div>
+<% end %>
+
 <div class="max-w-sm mx-auto">
 
   <%= form_for UserSubmission.new do |form| %>
